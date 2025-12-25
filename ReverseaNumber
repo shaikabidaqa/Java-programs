@@ -1,0 +1,46 @@
+package Arrayprogramms;
+
+import java.util.Scanner;
+
+public class ReverseaNumber {
+
+	public static void main(String[] args) {
+		   
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter a Number");
+		int num=sc.nextInt();
+		//1. Using Algorithm
+		int rev=0;
+		
+		while(num!=0) {
+		rev= rev*10+num%10;
+		num=num/10;
+		}
+		System.out.println("Reverse a Number:"+rev);
+		
+		//using string buffer class methods
+		StringBuffer rev1;
+		StringBuffer sbf=new StringBuffer(String.valueOf(num));
+		rev1=sbf.reverse();
+		
+		System.out.println("Reverse a Number using string buffer:"+rev1);
+		
+		//using string buffer 
+		
+		StringBuilder sb=new StringBuilder();
+		sb.append(num);	
+		StringBuilder rev2=sb.reverse();
+		System.out.println("Reverse a Number using string builder:"+ rev2);
+		
+		//LOGIC-4
+        String no = "9876545678321";
+
+        String reversed = "";
+        for (int i = no.length() - 1; i >= 0; i--) {
+            reversed += no.charAt(i);
+        }
+        System.out.println(reversed);
+
+	}
+
+}
