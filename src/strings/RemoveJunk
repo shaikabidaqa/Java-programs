@@ -1,0 +1,12 @@
+package Arrayprogramms;
+
+public class RemoveJunk {
+
+	public static void main(String[] args) {
+		 String s="@#$%^&**& WelcomE#@#@(#:@#to";
+		 
+		 System.out.println(s.replaceAll("[^a-zA-Z0-9]", ""));
+		
+	}
+
+}
